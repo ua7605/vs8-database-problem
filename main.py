@@ -46,5 +46,6 @@ if __name__ == '__main__':
     subscriber.subscribe(topic="allData", callback=callbackFunc)
     thread = threading.Thread(target=read_vessel_data)
     thread.start()
-    RESTApi.app.run(host="127.0.0.1", debug=False)
+    # RESTApi.app.run(host="127.0.0.1", debug=False)
+    RESTApi.app.run(host="143.129.80.148", debug=False)
 
