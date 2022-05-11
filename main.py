@@ -16,11 +16,12 @@ class Vincent:
 
 def read_vessel_data():
     while True:
-        print(vesselValues.longitude)
+        #print(vesselValues.longitude)
         time.sleep(1)
 
 # In this function the received data of VS8 in JSON format will be accessible.
 def callbackFunc(message_in_json_object):
+    print("message received")
     vesselValues.types = message_in_json_object["type"]
     vesselValues.geometry_type = message_in_json_object["geometry"]["type"]
     vesselValues.latitude = message_in_json_object["geometry"]["coordinates"][1]
